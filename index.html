@@ -6,6 +6,7 @@
     <title>Instagram With Bootsctrap</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"> 
 </head>
 <body>
     <nav class="navbar bg-body-tertiary ms-4">
@@ -17,7 +18,34 @@
               Instragram
           </a>
           <div class="d-flex">
-              <button type="button" class="btn btn-success mx-4" data-bs-target="#staticBackdrop">Create a new post</button>
+            <button type="button" class="btn btn-success mx-4" data-bs-toggle="modal" data-bs-target="#newPostModal">Create a new post</button>
+            <div class="modal" tabindex="-1" id="newPostModal">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Create a new post</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <label for="captionTextarea" class="form-label"><h6>Caption:</h6></label>
+                        <textarea class="form-control" id="captionTextarea" rows="3" placeholder="Add the caption of your post here"></textarea>
+                        
+                        <div class="d-flex align-items-center mt-2">
+                            <button class="btn btn-light me-2" style="width: 40px; height: 40px;">
+                                <i class="bi bi-camera-fill"></i>
+                            </button>
+                            <button class="btn btn-light" style="width: 40px; height: 40px;">
+                                <i class="bi bi-geo-alt-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-success">Publish</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
               
               <div class="dropdown-center">
                   <button type="button" class="btn btn-secondary dropdown-toggle me-5" data-bs-toggle="dropdown" aria-expanded="false">
@@ -37,7 +65,7 @@
         </div>
     </nav>
 
-    <div class="container-fluid d-flex justify-content-center py-4">
+    <div class="container-fluid d-flex justify-content-center py-1">
         <ul class="nav nav-pill mb-3" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
               <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
@@ -58,37 +86,37 @@
 
     <div class="tab-content" id="pills-tabContent">
         <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col-4 p-0">
+                    <div class="col-4">
                         <img class="img border border-2" src="https://www.acibadem.com.tr/assets/images/locations/acibadem-taksim-hastanesi-og-banner.png" alt="flower">
                     </div>
-                    <div class="col-4 p-0">
+                    <div class="col-4">
                         <img class="img  border border-1" src="https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/wp-content/uploads/2016/11/2017-Chevrolet-Camaro-ZL1-102.jpg?crop=0.776xw:0.953xh;0.122xw,0.0472xh&resize=640:*" alt="flower">
                     </div>
-                    <div class="col-4 p-0">
+                    <div class="col-4">
                         <img class="img  border border-1" src="https://content.wfmynews2.com/photo/2016/06/07/kimbo%20slice%20obit%20pic_1465292620654_2782089_ver1.0.jpg" alt="flower">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-4 p-0">
+                    <div class="col-4">
                         <img class="img  border border-1" src="https://i.pinimg.com/originals/c8/bf/50/c8bf502b3ac09e2de375af03d34a25ac.jpg" alt="flower">
                     </div>
-                    <div class="col-4 p-0">
+                    <div class="col-4">
                         <img class="img  border border-1" src="https://img.freepik.com/free-photo/view-tiger-animal-wild_23-2150374850.jpg" alt="flower">
                     </div>
-                    <div class="col-4 p-0">
+                    <div class="col-4">
                         <img class="img  border border-1" src="https://lh3.googleusercontent.com/p/AF1QipM7OZ8JSP9sYfYa6wU9gc78Wlie06KEvWGC6VcZ=w1080-h608-p-no-v0" alt="flower">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-4 p-0">
+                    <div class="col-4">
                         <img class="img  border border-1" src="https://img.goodfon.com/wallpaper/big/4/94/aaron-burden-holy-bible-bible-sea-sun-goes-down-sunlight-woo.jpg" alt="flower">
                     </div>
-                    <div class="col-4 p-0">
+                    <div class="col-4">
                         <img class="img  border border-1" src="https://i.ytimg.com/vi/NIF5lV8mMRY/maxresdefault.jpg" alt="flower">
                     </div>
-                    <div class="col-4 p-0">
+                    <div class="col-4">
                         <img class="img  border border-1" src="https://www.thefoat.com/pics/ride_photo_1557710966662973fd.jpg" alt="flower">
                     </div>
                 </div>
@@ -212,27 +240,6 @@
                     <p>What a baddie!</p>
                 </div>
             </div>
-        </div>
-    </div>
-    
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="staticBackdropLabel">Create a New Post</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form>
-                      <label for="caption" class="form-label">Caption:</label>
-                      <textarea class="form-control" placeholder="Enter your caption here" id="caption"></textarea>
-                    </form>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Post</button>
-            </div>
-          </div>
         </div>
     </div>
 
